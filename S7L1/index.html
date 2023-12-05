@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Esercizio Javascipt con gli oggetti</title>
+</head>
+<body>
+    
+    <main>
+        <div class="container w-50">
+            <form class="mt-4">
+                <h2 class="text-center">Inserisci il tuo pet nel sistema!</h2>
+
+                <div class="form-floating mt-5 mb-3">
+                    <input type="text" class="form-control" id="floatingInput1" placeholder="Il mio nome è...">
+                    <label for="floatingInput1">Nome pet</label>
+                </div> 
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput2" placeholder="Il mio padrone è...">
+                    <label for="floatingInput2">Nome padrone</label>
+                </div> 
+
+                <div class="input-group mb-3">
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option selected>Scegli...</option>
+                      <option value="1">Cane</option>
+                      <option value="2">Gatto</option>
+                      <option value="3">Coniglio</option>
+                    </select>
+                    <label class="input-group-text px-5" for="inputGroupSelect01">Specie</label>
+                </div>     
+                
+                <div class="input-group mb-3">
+                    <select class="form-select" id="inputGroupSelect02">
+                      <option selected>Scegli...</option>
+                      <option value="1">Labrador</option>
+                      <option value="2">Soriano</option>
+                      <option value="3">Nano</option>
+                    </select>
+                    <label class="input-group-text px-5" for="inputGroupSelect02">Razza</label>
+                </div>  
+                
+                <button type="button" class="btn btn-primary">Submit</button>
+              </form>
+
+              <div>
+                <h5 id="testoH5" class="text-danger mt-5">Nessun dato inserito...</h5>
+                <ul class="list-group">
+                </ul>
+              </div>
+        </div>
+    </main>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
