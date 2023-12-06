@@ -101,3 +101,55 @@ if (window.location.pathname === '/esercizio2.html') {
         sessionStorage.removeItem('counter', counter);
     })
 }
+
+
+if (window.location.pathname === '/extra.html') {
+    window.onload = function() {
+        let storedItems = JSON.parse(localStorage.getItem('items')) || [];
+
+        if (storedItems.length > 0) {
+            let ul = document.querySelector(".list-group");
+
+            storedItems.forEach(item => {
+                let li = document.createElement("li");
+                li.classList.add("list-group-item");
+                li.innerText = item;
+                ul.appendChild(li);
+            });
+        }
+    };
+
+    let aggiungi = document.querySelector("#aggiungi");
+    let elimina = document.querySelector("#elimina");
+    let ul = document.querySelector(".list-group");
+    let input = document.querySelector("#input");
+
+    aggiungi.addEventListener('click', () => {
+        let li = document.createElement("li");
+
+        if (input.value.length < 2) {
+            alert("Inserisci almeno 2 caratteri!");
+            return false;
+        } else {
+            li.classList.add("list-group-item");
+            li.innerText = input.value; 
+            ul.appendChild(li);
+        
+
+            // Recupera gli elementi già presenti nel localStorage
+            let storedItems = JSON.parse(localStorage.getItem('items')) || [];
+            storedItems.push(input.value); // Aggiunge il nuovo valore all'array
+            localStorage.setItem('items', JSON.stringify(storedItems)); // Salva l'array aggiornato nella localStorage
+            input.value = ""; // Pulisce l'input dopo l'aggiunta
+        }
+    });
+
+    elimina.addEventListener('click', () => {
+        // Rimuove gli elementi dalla lista
+        ul.innerHTML = "";
+
+        // Rimuove tutti gli elementi salvati nel localStorage
+        localStorage.removeItem('items');
+    });
+
+}
