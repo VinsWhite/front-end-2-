@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Esercizio 1 - S7L2</title>
+</head>
+<body>
+
+    <main class="container w-50 mt-5">
+        <h1>Esercizio 1 su JSON e storage</h1>
+        <form>
+            <div class="mb-3">
+              <label for="input" class="form-label">Inserisci il tuo nome</label>
+              <input type="text" class="form-control" id="input" aria-describedby="text">
+              <div id="text" class="form-text">Salva il tuo nome nel localStorage! (O cancellalo)</div>
+            </div>
+            <div>
+            <button id="aggiungi" type="button" class="btn btn-primary">Aggiungi</button>
+            <button id="elimina" type="button" class="btn btn-danger">Elimina</button>
+
+            <ul class="list-group mt-3">
+                <!-- <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li> -->
+              </ul>
+          </form>
+    </main>
+
+    <script src="script/script.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
