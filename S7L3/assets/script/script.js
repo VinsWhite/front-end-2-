@@ -22,8 +22,8 @@ function createBookCards(books) {
         card.classList.add('col-3'); // Aggiungi le classi Bootstrap per la griglia
         //creazione dinamica delle cards
         card.innerHTML = `
-            <div class="card" style="width: 18rem; height: 40em">
-                <img src="${book.img}" class="card-img-top" alt="Book Cover">
+            <div class="card m-3" style="width: 18rem; height: 38em;">
+                <img src="${book.img}" class="card-img-top" alt="Book Cover" style="height:25rem;">
                 <div class="card-body">
                     <h5 class="card-title">${book.title}</h5>
                     <p class="card-text">Price: $${book.price}</p>
