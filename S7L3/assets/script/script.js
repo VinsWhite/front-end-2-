@@ -29,6 +29,7 @@ function createBookCards(books) {
                 <div class="card-body">
                     <h5 class="card-title" style="height: 6rem;">${book.title}</h5>
                     <p class="card-text">Price: $${book.price}</p>
+                    <div class="des"></div>
                     <button class="btn btn-dark">Compra ora</button>
                     <button class="btn btn-danger" id="liveToastBtn">Scarta</button>
                 </div>
@@ -42,6 +43,7 @@ function createBookCards(books) {
 document.addEventListener('DOMContentLoaded', () => {
     let container = document.querySelector('.row');
     let toastBody = document.querySelector(".toast-body");
+    let carrello = JSON.parse(localStorage.getItem('carrello')) || [];
 
     container.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('btn-danger')) {
@@ -55,19 +57,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 let toast = document.querySelector('#liveToast');
                 let bsToast = new bootstrap.Toast(toast);
                 bsToast.show();
-                toastBody.innerHTML = `<h5 class="card-title">${book.title}</h5> Libro eliminato dalla libreria`;
+                let bookTitle = card.querySelector('.card-title').innerText; // Ottieni il titolo del libro dalla carta che viene eliminata
+                toastBody.innerHTML = `<p class="card-title fw-bold">${bookTitle}</p> Libro eliminato dalla libreria`;
+
             }
         } else if (e.target && e.target.classList.contains('btn-dark')) {
             let compra = e.target; 
             let card = compra.closest('.card'); // Trova l'elemento genitore con classe "card"
             let modalBody = document.querySelector('.modal-body'); 
-            let contCarrello = document.createElement('p');
-            modalBody.appendChild(contCarrello);
-    
+            /* unchecked(e); */
+
             if (card) {
                 card.style.border = "0.2em solid red"; // Colora il bordo della carta selezionata
                 modalBody.innerText = ""; //eliminiamo il messagggio di carrello vuoto
+                let compra = e.target.parentNode.parentNode.parentNode;
+                let cart = document.querySelector("div.modal .modal-body")
+                cart.innerHTML += compra.innerHTML
+                carrello.push(compra);
+
+                
+                localStorage.setItem('carrello', JSON.stringify(carrello));
+
+
+                let deseleziona = document.createElement("button"); //creiamo un pulsante per deselezionare l'acquisto
+                let des = document.querySelector(".des");
+                deseleziona.classList.add('deseleziona');
+                deseleziona.classList.add('btn');
+                deseleziona.classList.add('btn-secondary');
+                deseleziona.textContent = 'Deseleziona acquisti';
+                des.appendChild(deseleziona);
+
+                console.log(deseleziona);
             }
+
         }
     });
 
@@ -76,14 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
     toastElement.addEventListener('hidden.bs.toast', function () {
         toastElement.remove(); // Rimuovi il toast dal DOM dopo che è stato nascosto
     });
-
-    //pulsante compra ora 
-    /* let compra = document.querySelector('.btn-dark');
-    let modalBody = document.querySelector('.modal-body');
-
-    compra.addEventListener('click', () => {
-    }) */
 });
+
+
+/* let unchecked = (e) => { //funzione per togliere il bordo rosso se viene premuto di nuovo il tasto "compra ora"
+    let compra = e.target;
+    let card = compra.closest('.card');
+    if (card) {
+        card.style.border = ''; // Rimuovi lo stile del bordo rosso
+    }
+} */
 
 
 
