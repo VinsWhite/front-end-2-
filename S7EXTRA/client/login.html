@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/script/script.js"></script>
+    <link rel="stylesheet" href="../server/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="icon" href="assets/img/logo.png">
+    <title>News.it</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light" href="index.html">News.it</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Area personale
+                    </a>
+                    <ul class="dropdown-menu bg-primary">
+                      <li><a class="dropdown-item text-light" href="login.html">Login</a></li>
+                      <li><a class="dropdown-item text-light" href="registration.html">Registrazione</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-light" href="#">Esci</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <div id="login" class="d-flex justify-content-center mt-5 bg-primary-subtle py-5 mx-5 rounded-5">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail2" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword2" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword2">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="button" id="login" class="btn btn-primary">Submit</button>
+                <div>
+                    <a class="text-end" href="registration.html">Non sei ancora registrato?</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+
+    <!-- script di bootstrap -->
+    <script src="../server/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
