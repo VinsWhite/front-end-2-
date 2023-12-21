@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="assets/script/script.js"></script>
-    <link rel="stylesheet" href="../server/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="icon" href="assets/img/logo.png">
-    <title>News.it</title>
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
-    
-    <header>
-        <nav class="navbar navbar-expand-lg bg-primary">
-            <div class="container-fluid">
-              <a class="navbar-brand text-light" href="index.html">News.it</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Vanilla JS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+            </ul>
+            <span class="navbar-text" id="logNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Area personale
-                    </a>
-                    <ul class="dropdown-menu bg-primary">
-                      <li><a class="dropdown-item text-light" href="login.html">Login</a></li>
-                      <li><a class="dropdown-item text-light" href="registration.html">Registrazione</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item text-light" href="#">Esci</a></li>
-                    </ul>
-                  </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+                    </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-    
+            </span>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <h1 class="text-center my-5">HomePage</h1>
+    </div>
 
-    <!-- script di bootstrap -->
-    <script src="../server/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

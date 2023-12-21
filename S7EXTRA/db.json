@@ -1,60 +1,20 @@
 {
   "users": [
     {
-      "email": "vincenzosa26@icloud.com",
-      "password": "$2a$10$GnZQTopbWmGMHgoI1PyS4Om3KApAKySQByxpgFF555cWgurxR0MXi",
-      "name": "Vincenzo",
-      "surname": "Saccone",
+      "email": "vincenzo@enzo.com",
+      "password": "$2a$10$W31UVLghUkyn8gzeE4T4yunzI4cu1MJVrAeclsT.R.9TLBg0t35wa",
+      "firstname": "Vincenzo",
+      "lastname": "Enzo",
+      "city": "Catania",
       "id": 1
     },
     {
-      "email": "prova@gmail.com",
-      "password": "$2a$10$3/V/wfg4yHcNZvkbIBy3qOxRC6fZNtb0MEJt2TS2gQXqLmtAAT8cW",
-      "name": "Vincenzo",
-      "surname": "Saccone",
+      "email": "giovanni@enzo.com",
+      "password": "$2a$10$YL31KdtOVjI6jj3lD4bDE..vTZQpTJVJSJPudI54XfHZm4nnjRQem",
+      "firstname": "Giovanni",
+      "lastname": "Enzo",
+      "city": "Catania",
       "id": 2
-    },
-    {
-      "email": "umbertoemanuele@gmail.com",
-      "password": "$2a$10$PxsglL362PQ3aQZFr3G6rO2HKT/f/2.TBDkTLoCSW9kxWUwUz6NVi",
-      "name": "Umberto",
-      "surname": "Emanuele",
-      "id": 3
-    },
-    {
-      "email": "altraprova@gmail.com",
-      "password": "$2a$10$moG6wGdriluKZ8GILhDbiedXXmGSvabOR2UDCdGY6V5/F/IELN0U2",
-      "name": "Altra",
-      "surname": "Prova",
-      "id": 4
-    },
-    {
-      "email": "vincenzosaccone@boh.com",
-      "password": "$2a$10$JOuzLV52mMUYEjncv9fYYuURDLTTts/alvGt782N6G3fSzDKm3oRq",
-      "name": "Vincenzo",
-      "surname": "Saccone",
-      "id": 5
-    },
-    {
-      "email": "giovanni23@chiesa.str",
-      "password": "$2a$10$sCLq27Zg1SoMgBKUmHnrp.cZ4LXBwN6yQ2RTwxPD8kGUjbzjgmkrK",
-      "name": "Giovanni",
-      "surname": "Ventitreesimo",
-      "id": 6
-    },
-    {
-      "email": "vitino@vito.com",
-      "password": "$2a$10$SLyljj321NyNrtQ0I3L2KO3Euy/7wYTGpfKB0AZY2S35YcHhJTCr2",
-      "name": "vito",
-      "surname": "vitino",
-      "id": 7
-    },
-    {
-      "email": "ciao@comeva.com",
-      "password": "$2a$10$BbDWIgj6yKqwH8vSVohrjeXfemnURJwTHTZUyElxfo2wDitqlaVeS",
-      "name": "Ciao",
-      "surname": "ComeVa",
-      "id": 8
     }
   ],
   "posts": [
@@ -73,5 +33,6 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "products": []
 }

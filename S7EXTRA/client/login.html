@@ -3,65 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="assets/script/script.js"></script>
-    <link rel="stylesheet" href="../server/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="icon" href="assets/img/logo.png">
-    <title>News.it</title>
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
-    
-    <header>
-        <nav class="navbar navbar-expand-lg bg-primary">
-            <div class="container-fluid">
-              <a class="navbar-brand text-light" href="index.html">News.it</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Vanilla JS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+            </ul>
+            <span class="navbar-text" id="logNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Area personale
-                    </a>
-                    <ul class="dropdown-menu bg-primary">
-                      <li><a class="dropdown-item text-light" href="login.html">Login</a></li>
-                      <li><a class="dropdown-item text-light" href="registration.html">Registrazione</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item text-light" href="#">Esci</a></li>
-                    </ul>
-                  </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+                    </li>
                 </ul>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <h1 class="text-center my-5">Login</h1>
+        <div class="card" id="login-page">
+        <form>
+          <div class="card-body">
+            <div class="mb-3 row">
+              <label for="email" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="email" name="email"/>
               </div>
             </div>
-          </nav>
-    </header>
-
-    <main>
-        <div id="login" class="d-flex justify-content-center mt-5 bg-primary-subtle py-5 mx-5 rounded-5">
-            <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail2" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword2" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword2">
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="button" id="login" class="btn btn-primary">Submit</button>
-                <div>
-                    <a class="text-end" href="registration.html">Non sei ancora registrato?</a>
-                </div>
-            </form>
+            <div class="mb-3 row">
+              <label for="password" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" name="password" />
+              </div>
+            </div>
+            <div class="mb-3 row px-5">
+              <button type="button" class="btn btn-outline-dark w-100">Login</button>
+            </div>
+          </div>
+          <!-- alert -->
+        </form>
         </div>
-    </main>
-    
-
-    <!-- script di bootstrap -->
-    <script src="../server/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      </div>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

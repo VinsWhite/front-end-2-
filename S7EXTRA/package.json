@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0"
+  }
+}
