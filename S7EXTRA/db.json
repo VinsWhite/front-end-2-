@@ -29,10 +29,66 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "marca": "Apple",
+      "modello": "iPhone 13",
+      "categoria": "Smartphone",
+      "prezzo": "800",
+      "quantita": "40",
+      "imgURL": "https://www.google.com/search?client=firefox-b-d&sca_esv=592829625&sxsrf=AM9HkKkH-FhvrzhJWbCRKlj6S1rL1w8ehA:1703168977420&q=apple+iphone+13&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjPz5Dv3qCDAxWx8QIHHcHCASMQ0pQJegQIDBAB&biw=1280&bih=595&dpr=1.5#imgrc=T2aYkboDZzQLwM",
+      "id": 2
+    },
+    {
+      "marca": "Apple",
+      "modello": "iPhone 13",
+      "categoria": "Smartphone",
+      "prezzo": "800",
+      "quantita": "40",
+      "imgURL": "https://www.google.com/search?client=firefox-b-d&sca_esv=592829625&sxsrf=AM9HkKkH-FhvrzhJWbCRKlj6S1rL1w8ehA:1703168977420&q=apple+iphone+13&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjPz5Dv3qCDAxWx8QIHHcHCASMQ0pQJegQIDBAB&biw=1280&bih=595&dpr=1.5#imgrc=T2aYkboDZzQLwM",
+      "id": 3
+    },
+    {
+      "marca": "Apple",
+      "modello": "iPhone 13",
+      "categoria": "Smartphone",
+      "prezzo": "800",
+      "quantita": "40",
+      "imgURL": "https://www.google.com/search?client=firefox-b-d&sca_esv=592829625&sxsrf=AM9HkKkH-FhvrzhJWbCRKlj6S1rL1w8ehA:1703168977420&q=apple+iphone+13&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjPz5Dv3qCDAxWx8QIHHcHCASMQ0pQJegQIDBAB&biw=1280&bih=595&dpr=1.5#imgrc=T2aYkboDZzQLwM",
+      "id": 4
+    },
+    {
+      "marca": "Apple",
+      "modello": "iPhone 13",
+      "categoria": "Smartphone",
+      "prezzo": "800",
+      "quantita": "40",
+      "imgURL": "https://www.google.com/search?client=firefox-b-d&sca_esv=592829625&sxsrf=AM9HkKkH-FhvrzhJWbCRKlj6S1rL1w8ehA:1703168977420&q=apple+iphone+13&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjPz5Dv3qCDAxWx8QIHHcHCASMQ0pQJegQIDBAB&biw=1280&bih=595&dpr=1.5#imgrc=T2aYkboDZzQLwM",
+      "id": 5
+    },
+    {
+      "marca": "Samsung",
+      "modello": "Samsung S23",
+      "categoria": "Smartphone",
+      "prezzo": "900",
+      "quantita": "40",
+      "imgURL": "https://www.google.com/search?client=firefox-b-d&sca_esv=592839051&sxsrf=AM9HkKkbx5lnWmdCrgezXJFEwKM90fnf1Q:1703170021990&q=samsung+s23&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjPi5zh4qCDAxWlbPEDHY9mBLEQ0pQJegQICxAB&biw=1280&bih=595&dpr=1.5#imgrc=tuuxlrciiWM4PM",
+      "id": 6
+    },
+    {
+      "marca": "Samsung",
+      "modello": "Samsung S23",
+      "categoria": "Smartphone",
+      "prezzo": "900",
+      "quantita": "40",
+      "imgURL": "https://www.google.com/search?client=firefox-b-d&sca_esv=592839051&sxsrf=AM9HkKkbx5lnWmdCrgezXJFEwKM90fnf1Q:1703170021990&q=samsung+s23&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjPi5zh4qCDAxWlbPEDHY9mBLEQ0pQJegQICxAB&biw=1280&bih=595&dpr=1.5#imgrc=tuuxlrciiWM4PM",
+      "id": 7
     }
   ],
   "profile": {
     "name": "typicode"
   },
-  "products": []
+  "products": [
+    {}
+  ]
 }

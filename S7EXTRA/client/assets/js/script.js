@@ -1,9 +1,11 @@
-//url dell'API
+//URL ALL'API
 const urlApi = 'http://localhost:3000/'; //lo slash sarà accompagnato da login e register
 
+// -------------------------------- CORPO PRINCIPALE ----------------------------------------
 //questo evento lo aggiungiamo perché abbiamo inserito lo script in alto nell'head
 document.addEventListener('DOMContentLoaded', () => {
     
+    // --------------------- PULSANTI PRINCIPALI -----------------------------
     //pulsante di registrazione
     let btnRegister = document.querySelector('#register-page button');
     //pulsante di login
@@ -18,12 +20,35 @@ document.addEventListener('DOMContentLoaded', () => {
         btnLogin.addEventListener('click', loginEvent)
     } else if(addProduct) {
         addProduct.addEventListener('click', addProductEvent);
-    } //altrimenti nulla
-
+    } //altrimenti nulla    
     //questo controllo viene fatto per non generare errori nelle pagine in cui gli elementi non sono presenti 
     
     //richiamiamo la funzione
     getUserLog();
+
+    let products = localStorage.getItem('products');
+    let productList = products ? JSON.parse(products) : [];
+
+    displayProducts(productList);
+
+    let deleteDataButton = document.querySelector('#deleteAll');
+
+    if(deleteDataButton) {
+        deleteDataButton.addEventListener('click', () => {
+            localStorage.clear();
+            // Puoi anche aggiornare l'interfaccia o fare altre azioni necessarie dopo aver cancellato i dati
+            alert('I dati sono stati cancellati dal localStorage!');
+            location.reload();
+    
+            let marca = document.querySelector("#marca").value = "";
+            let modello = document.querySelector("#modello").value = "";
+            let categoria = document.querySelector("#categoria").value = "";
+            let prezzo = document.querySelector("#prezzo").value = "";
+            let quantita = document.querySelector("#quantita").value = "";
+            let imgURL = document.querySelector("#imgURL").value = "";
+        });
+    }
+
 })
 
 
@@ -116,9 +141,94 @@ function loginEvent(e) {
 }
 
 //funzione per aggiungere un prodotto
-function addProductEvent (e) {
+function addProductEvent(e) {
     e.preventDefault(); //annulla il comportamento di default
+    //prendiamo da tastiera le caratteristiche del prodotto
+    let marca = document.querySelector("#marca").value;
+    let modello = document.querySelector("#modello").value;
+    let categoria = document.querySelector("#categoria").value;
+    let prezzo = document.querySelector("#prezzo").value;
+    let quantita = document.querySelector("#quantita").value;
+    let imgURL = document.querySelector("#imgURL").value;
+
+    //oggetto che memorizza il necessario
+    let obj = {
+        marca,
+        modello,
+        categoria,
+        prezzo,
+        quantita,
+        imgURL
+    };
+
+    // Recupera i dati dei prodotti dal localStorage
+    let products = localStorage.getItem('products');
+    let productList = products ? JSON.parse(products) : [];
+
+    // Aggiungi il nuovo prodotto alla lista dei prodotti
+    productList.push(obj);
+
+    // Aggiorna i dati dei prodotti nel localStorage
+    localStorage.setItem('products', JSON.stringify(productList));
+
+    // Visualizza tutti i prodotti (vecchi e nuovi) nella tabella
+    displayProducts(productList);
+
+    //svuota i campi per i prossimi prodotti
+    marca.value = "";
+    modello.value = "";
+    modello.value = "";
+    categoria.value = "";
+    prezzo.value = "";
+    quantita.value = "";
+    imgURL.value = "";
+
+    let deleteProduct = document.querySelector("#deletePr");
+    deleteProduct.addEventListener('click', () => {
+        //funzione per rimuovere il prodotto (usare il delete)
+    })
+
+    let editProduct = document.querySelector("#editPr");
+    editProduct.addEventListener('click', () => {
+        //funzione per modificare il prodotto (usare il put)
+    })
+    //N.B: per rimuovere e modificare dobbiamo usare l'id del prodotto per riferimento 
 }
+
+// Funzione per visualizzare i prodotti nella tabella
+function displayProducts(products) {
+    let tbody = document.querySelector("tbody");
+
+    if (tbody) {
+        tbody.innerHTML = ''; // Cancella il contenuto attuale del tbody
+
+    // Cicla attraverso tutti i prodotti e crea una riga per ciascun prodotto
+    products.forEach((product, index) => {
+        let newRowHTML = `
+            <tr>
+                <th scope="row">${index + 1}</th>
+                <td><img src="${product.imgURL}" alt="immagine"></td>
+                <td>${product.modello}</td>
+                <td>${product.marca}</td>
+                <td>${product.quantita}</td>
+                <td>${product.prezzo}</td>
+                <td>
+                    <button type="button" id="deletePr" class="btn btn-sm btn-outline-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                    <button type="button" id="editPr" class="btn btn-sm btn-outline-warning">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                </td>
+            </tr>
+        `;
+
+        // Aggiungi la nuova riga alla fine del tbody
+        tbody.innerHTML += newRowHTML;
+    });
+    }
+}
+
 
 
 //funzione per gestire le risposte in merito al login

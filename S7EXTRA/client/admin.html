@@ -41,26 +41,29 @@
         <div id="formProducts">
             <div class="row g-3">
                 <div class="col-sm">
-                  <input type="text" class="form-control" placeholder="Marca..." aria-label="Marca">
+                  <input type="text" class="form-control" id="marca" placeholder="Marca..." aria-label="Marca">
                 </div>
                 <div class="col-sm">
-                  <input type="text" class="form-control" placeholder="Modello..." aria-label="Modello">
+                  <input type="text" class="form-control" id="modello" placeholder="Modello..." aria-label="Modello">
                 </div>
                 <div class="col-sm">
-                  <input type="text" class="form-control" placeholder="Categoria..." aria-label="Categoria">
+                  <input type="text" class="form-control" id="categoria" placeholder="Categoria..." aria-label="Categoria">
                 </div>
                 <div class="col-sm">
-                  <input type="number" class="form-control" placeholder="Prezzo..." aria-label="Prezzo">
+                  <input type="number" class="form-control" id="prezzo" placeholder="Prezzo..." aria-label="Prezzo">
                 </div>
                 <div class="col-sm">
-                    <input type="number" class="form-control" placeholder="Quantità..." aria-label="Quantita">
+                    <input type="number" class="form-control" id="quantita" placeholder="Quantità..." aria-label="Quantita">
                 </div>
                 <div class="col-sm">
-                    <input type="text" class="form-control" placeholder="Immagine..." aria-label="Immagine">
+                    <input type="text" class="form-control" id="imgURL" placeholder="Immagine..." aria-label="Immagine">
                 </div>
                 <div class="col-sm">
                     <button type="button" id="addProduct" class="btn btn-secondary w-100">Add</button>
                 </div>
+                <div class="col-sm">
+                  <button type="button" id="deleteAll" class="btn btn-danger w-100">Delete All</button>
+              </div>
               </div>
               <div class="my-5">
                 <table class="table table-hover">
