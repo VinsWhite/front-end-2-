@@ -1,32 +1,26 @@
 import React, { Component } from 'react';
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import fantasyData from '../API/fantasy.json'; // Importa i dati direttamente dal file JSON
 
 export default class AllTheBooks extends Component {
+
+  /* ricordiamo come il costruttore viene richiamato prima della creazione del componente (una sola volta) */
   constructor(props) {
     super(props);
+    /* utilizziamo lo state per inizializzare lo stato dei libri */
     this.state = {
-      books: [] // Inizializza l'array per memorizzare i dati dei libri
+      books: fantasyData 
     };
   }
 
-  componentDidMount() {
-    // Fetch dei dati dal file fantasy.json usando fetch API
-    fetch('fantasy.json')
-      .then(response => response.json())
-      .then(data => {
-        // Aggiorna lo stato con i dati ottenuti dal file JSON
-        this.setState({ books: data });
-      })
-      .catch(error => {
-        console.error('Errore durante il recupero dei dati:', error);
-      });
-  }
-
   render() {
-    const { books } = this.state;
+    const { 
+      books 
+    } = this.state;
 
     return (
       <Row className="justify-content-center mt-4">
+
         {books.map((book, index) => (
           <Col key={index} md={4}>
             <Card>
@@ -34,7 +28,7 @@ export default class AllTheBooks extends Component {
               <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>{book.category}</Card.Text>
-                <Button variant="primary">Acquista</Button>
+                <Button variant="secondary">Acquista</Button>
               </Card.Body>
             </Card>
           </Col>
