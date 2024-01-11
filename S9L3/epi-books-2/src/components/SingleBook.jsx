@@ -1,23 +1,26 @@
-import React from 'react'
-import { Card, Button } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Card } from 'react-bootstrap'
+import CommentArea from './CommentArea'
 
 export default class SingleBook extends Component {
 
-    state = {
-        selected: false
-    }
+state = {
+    selected: false
+}
 
   render() {
     return (
         <>
-            <Card className='selectedBook'>
-                <Card.Img variant="top" src={this.book.img} onClick={() => this.setState({selected:true})} />
+            <Card style={{ width: '18rem' }} className={this.state.selected === true ? 'selectedBook' : ''}>
+                <Card.Img 
+                    variant="top" 
+                    src={this.props.book.img} 
+                    onClick={() => this.setState((prevState) => ({selected: !prevState.selected}))} />
                 <Card.Body>
-                    <Card.Title>{this.book.title}</Card.Title>
-                    <Card.Text>{this.book.category}</Card.Text>
-                    <Button variant="secondary">Acquista</Button>
+                    <Card.Title>{this.props.book.title}</Card.Title>
                 </Card.Body>
             </Card>
+            {this.state.selected && <CommentArea />} {/* Mostra CommentArea solo quando selected è true */}
         </>
     )
   }
