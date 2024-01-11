@@ -11,7 +11,7 @@ export default class CommentArea extends Component {
     componentDidMount() {
         fetch("https://striveschool-api.herokuapp.com/api/books/:elementId/comments", {
             headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4MTZmOGMwNTgzNTAwMTg1MjJjOTIiLCJpYXQiOjE3MDQ4OTYxNzIsImV4cCI6MTcwNjEwNTc3Mn0.fm9NnIfWeuouYayj8TRg4cBjQHFSBmT8Jae8w1UqOvA"
+                "Authorization": "Bearer ....."
             }
         })
         .then(response => response.json())

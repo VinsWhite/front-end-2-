@@ -8,6 +8,10 @@ state = {
     selected: false
 }
 
+selectedBook = () => {
+    this.setState((prevState) => ({selected: !prevState.selected}))
+}
+
   render() {
     return (
         <>
@@ -15,7 +19,7 @@ state = {
                 <Card.Img 
                     variant="top" 
                     src={this.props.book.img} 
-                    onClick={() => this.setState((prevState) => ({selected: !prevState.selected}))} />
+                    onClick={this.selectedBook} />
                 <Card.Body>
                     <Card.Title>{this.props.book.title}</Card.Title>
                 </Card.Body>
