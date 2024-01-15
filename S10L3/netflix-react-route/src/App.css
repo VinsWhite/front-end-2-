@@ -1,0 +1,15 @@
+body {
+    background-color: #181a1b !important;
+}
+
+.bg-netflix {
+    background-color: #181a1b !important;
+}
+
+.col img {
+    transition: transform 0.2s;
+  }
+  
+.col img:hover {
+    transform: scale(1.1);
+}
