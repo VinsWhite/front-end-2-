@@ -1,5 +1,3 @@
-//Stavo ancora sistemando le pagine, più tardi continuo
-
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 
