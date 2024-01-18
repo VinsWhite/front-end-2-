@@ -1,0 +1,4 @@
+18.01.2024 / 17.00 --> dividendo i reducers, usando il combine e spostando le chiamate fetch, sono incappato
+in alcuni errori.
+Non riesco più a visualizzare i lavori e la pagina di preferiti. 
+Allora riparto rileggendo e commentando tutto il codice.

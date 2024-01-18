@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { removeFromFavourite } from "../actions";
 
 const FavouritesPage = () => {
-  const favourites = useSelector(state => state.favourite.list);
+  const favourites = useSelector(state => state.main.favourite.list);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();

@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import { endpointSearch } from "../endpoint/endpoint";
-import axios from 'axios'
 import SearchRowComponent from "../components/SearchRowComponent";
+import { searchJob } from "../actions";
+import { useDispatch, useSelector } from "react-redux";
 
 const HomePage = () => {
-  const [query, setQuery] = useState("");
-  const [jobs, setJobs] = useState([]);
+  const [query, setQuery] = useState(""); //inizializziamo lo stato
+  const dispatch = useDispatch();
+  const { jobs } = useSelector((state) => state);
+
 
   const handleChange = e => {
     setQuery(e.target.value);
@@ -14,32 +16,7 @@ const HomePage = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-
-    //chiamata fetch 'classica'
-    /* try {
-        const response = await fetch(endpointSearch + query + "&limit=20");
-        if (response.ok) {
-          const { data } = await response.json();
-          setJobs(data);
-        } else {
-          alert("Error fetching results");
-        }
-      } catch (error) {
-        console.log(error);
-      } */
-
-    //chiamata fetch più performante con axios
-    try {
-      const response = await axios.get(endpointSearch + query + "&limit=20");
-      if (response.status === 200) {
-        const { data } = response.data;
-        setJobs(data);
-      } else {
-        alert("Error fetching results");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(searchJob(query))
   };
 
   return (
